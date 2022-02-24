@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar style="--background: #349bcf;">
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="ellipsis-vertical-outline" style="color: white;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white;">My Matches</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #349bcf;" [fullscreen]="true" class="ion-padding">
+  <div>
+    <p style="color: white;">8 Profiles pending with me&nbsp;<ion-chip
+        style="border: 1px solid white;color: white;background: #349bcf;">5 New</ion-chip>
+    </p>
+  </div>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides pager="true" [options]="slideOptsOne" (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
+          <ion-slide *ngFor="let media of media;let i=index;">
+            <ion-card mode="ios" style="height: 440px;width: 220px;">
+              <img class="img" [src]="media.img">
+              <p>{{media.name}}</p>
+              <p style="padding: 5px;margin-top: -10px;">27 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,
+                Tamilnadu, India</p>
+              <ion-row style="margin-top: -20px;">
+                <ion-col (click)="goToViewProfile(i)">
+                  <ion-chip style="border: 1px solid white;color: white;background: #349bcf;">Yes</ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-chip style="border: 1px solid white;color: white;background: #349bcf;">No</ion-chip>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
