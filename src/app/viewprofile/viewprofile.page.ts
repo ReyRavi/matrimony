@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {Router } from '@angular/router';
 
 @Component({
   selector: 'app-viewprofile',
@@ -8,15 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ViewprofilePage implements OnInit {
   media:any;
-  constructor(private route: ActivatedRoute) { 
-    this.route.queryParams.subscribe(data => {
-      this.media = JSON.parse(data["media"]);
-
-    });
+  constructor(private router: Router) { 
+    let profiledetails: any = localStorage.getItem('profile')
+    this.media = JSON.parse(profiledetails);
   }
-
   ngOnInit() {
-    console.log(this.media)
   }
+  goBack(){
+    this.router.navigate(['/home'],);
 
+  }
 }

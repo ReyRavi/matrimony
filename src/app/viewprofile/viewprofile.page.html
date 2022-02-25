@@ -1,16 +1,12 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar style="--background: #349bcf;">
-    <ion-buttons slot="start" style="color: white;">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-
-  </ion-toolbar>
-</ion-header>
-
 <ion-content style="--background: #349bcf;">
-    <ion-card style="height: 440px;width: 95%;">
+  <ion-card style="height: 440px;width: 95%;">
+    <div class="container">
       <img class="img" [src]="media.img">
-      <p style="text-align: center;">{{media.name}}</p>
-      <p style="padding: 5px;margin-top: -10px;text-align: center;">{{media.desc}}</p>
-    </ion-card>
+      <div class="topleft" (click)="goBack()">
+        <ion-icon slot="start" style="zoom: 2;color: white;" name="arrow-back-outline"></ion-icon>
+      </div>
+    </div>
+    <p style="text-align: center;">{{media.name}}</p>
+    <p style="padding: 5px;margin-top: -10px;text-align: center;">{{media.desc}}</p>
+  </ion-card>
 </ion-content>

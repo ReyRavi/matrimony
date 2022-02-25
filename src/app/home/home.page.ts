@@ -17,9 +17,9 @@ export class HomePage {
   sliderThree: any;
 
   media: any = [
-    { name: 'Priyanka', img: 'assets/imgs/a1.jpg',desc:"27 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,Tamilnadu, India" },
-    { name: 'Priyanka', img: 'assets/imgs/a2.jpg',desc:"28 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,Tamilnadu, India" },
-    { name: 'Priyanka', img: 'assets/imgs/a3.jpg',desc:"29 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,Tamilnadu, India" },
+    { name: 'Priyanka', img: 'assets/imgs/a1.jpg', desc: "27 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,Tamilnadu, India" },
+    { name: 'Priyanka', img: 'assets/imgs/a2.jpg', desc: "28 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,Tamilnadu, India" },
+    { name: 'Priyanka', img: 'assets/imgs/a3.jpg', desc: "29 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,Tamilnadu, India" },
 
   ];
   //Configuration for each Slider
@@ -69,11 +69,7 @@ export class HomePage {
     });
   }
   goToViewProfile(i) {
-    let navigationExtras: any = {
-      queryParams: {
-        media: JSON.stringify(this.media[i])
-      }
-    }
-    this.router.navigate(['/viewprofile'], navigationExtras);
+    localStorage.setItem("profile", JSON.stringify(this.media[i]));
+    this.router.navigate(['/viewprofile'],);
   }
 }
