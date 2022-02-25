@@ -3,16 +3,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
-    path: 'search',
-    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: 'viewprofile',
@@ -21,12 +18,13 @@ const routes: Routes = [
   {
     path: 'swipe',
     loadChildren: () => import('./swipe/swipe.module').then( m => m.SwipePageModule)
-  }
+  },
 ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

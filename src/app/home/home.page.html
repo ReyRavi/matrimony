@@ -18,7 +18,7 @@
   </div>
 
 
-  <ion-grid>
+  <ion-grid style="margin-top: -40px;">
     <ion-row>
       <ion-col size="12">
         <ion-slides pager="true" [options]="slideOptsOne" (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
@@ -26,8 +26,7 @@
             <ion-card mode="ios" style="height: 440px;width: 220px;">
               <img class="img" [src]="media.img">
               <p>{{media.name}}</p>
-              <p style="padding: 5px;margin-top: -10px;">27 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,
-                Tamilnadu, India</p>
+              <p style="padding: 5px;margin-top: -10px;">{{media.desc}}</p>
               <ion-row style="margin-top: -20px;">
                 <ion-col (click)="goToViewProfile(i)">
                   <ion-chip style="border: 1px solid white;color: white;background: #349bcf;">Yes</ion-chip>

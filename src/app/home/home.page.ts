@@ -1,13 +1,13 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonSlides } from '@ionic/angular';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.page.html',
-  styleUrls: ['./profile.page.scss'],
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
 })
-export class ProfilePage implements OnInit {
+export class HomePage {
   @ViewChild('slideWithNav', { static: false }) slideWithNav: IonSlides;
   @ViewChild('slideWithNav2', { static: false }) slideWithNav2: IonSlides;
   @ViewChild('slideWithNav3', { static: false }) slideWithNav3: IonSlides;
@@ -17,9 +17,9 @@ export class ProfilePage implements OnInit {
   sliderThree: any;
 
   media: any = [
-    { name: 'Priyanka', img: 'assets/imgs/a1.jpg' },
-    { name: 'Priyanka', img: 'assets/imgs/a2.jpg' },
-    { name: 'Priyanka', img: 'assets/imgs/a3.jpg' },
+    { name: 'Priyanka', img: 'assets/imgs/a1.jpg',desc:"27 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,Tamilnadu, India" },
+    { name: 'Priyanka', img: 'assets/imgs/a2.jpg',desc:"28 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,Tamilnadu, India" },
+    { name: 'Priyanka', img: 'assets/imgs/a3.jpg',desc:"29 Yrs, 5 ft 2 in, Tamil, Nair, MBBS,Doctor, Chennai,Tamilnadu, India" },
 
   ];
   //Configuration for each Slider

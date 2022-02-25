@@ -1,7 +1,5 @@
 {
-  "name": "matrimony",
-  "integrations": {
-    "cordova": {}
-  },
+  "name": "matrimonyapp",
+  "integrations": {},
   "type": "angular"
 }

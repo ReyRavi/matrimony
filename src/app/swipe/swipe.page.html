@@ -4,6 +4,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content (swipeleft)="swipeLeftEvent($event)">
+  <ion-card style="height: 440px;width: 95%;">
+    <img class="img" src="assets/imgs/a1.jpg">
+    <!-- <p style="text-align: center;">{{media.name}}</p>
+    <p style="padding: 5px;margin-top: -10px;text-align: center;">{{media.desc}}</p> -->
+  </ion-card>
 </ion-content>

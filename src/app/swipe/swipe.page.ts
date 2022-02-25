@@ -11,5 +11,9 @@ export class SwipePage implements OnInit {
 
   ngOnInit() {
   }
-
+  swipeLeftEvent(e) {
+    if (e.direction == 2) {
+        //direction 2 = right to left swipe.
+    }
+}
 }

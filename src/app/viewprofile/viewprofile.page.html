@@ -1,12 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
+<ion-header class="ion-no-border">
+  <ion-toolbar style="--background: #349bcf;">
+    <ion-buttons slot="start" style="color: white;">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>viewprofile</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content style="--background: #349bcf;">
+    <ion-card style="height: 440px;width: 95%;">
+      <img class="img" [src]="media.img">
+      <p style="text-align: center;">{{media.name}}</p>
+      <p style="padding: 5px;margin-top: -10px;text-align: center;">{{media.desc}}</p>
+    </ion-card>
 </ion-content>
