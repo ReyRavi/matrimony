@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router } from '@angular/router';
+import {ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-viewprofile',
@@ -8,9 +8,13 @@ import {Router } from '@angular/router';
 })
 export class ViewprofilePage implements OnInit {
   media:any;
-  constructor(private router: Router) { 
-    let profiledetails: any = localStorage.getItem('profile')
-    this.media = JSON.parse(profiledetails);
+  constructor(private router: Router,private route:ActivatedRoute) { 
+    // let profiledetails: any = localStorage.getItem('profile')
+    // this.media = JSON.parse(profiledetails);
+    this.route.queryParams.subscribe(data => {
+      this.media = JSON.parse(data["media"]);
+
+    });
   }
   ngOnInit() {
   }
